@@ -1,9 +1,46 @@
 /* style.css */
+.glow-skill {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0px transparent;
+  cursor: pointer;
+}
+
+.glow-skill:hover {
+  box-shadow: 0 0 10px rgba(251, 146, 60, 0.8), 0 0 20px rgba(251, 146, 60, 0.6); /* orange glow */
+  transform: scale(1.05);
+}
+
+/* Navbar link glow on hover */
+nav a:hover {
+  color: #fb923c; /* orange-400 */
+  text-shadow: 0 0 8px rgba(251, 146, 60, 0.8);
+  transition: all 0.3s ease;
+}
+
+/* Glowing card hover effect */
+.glow-card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+
+.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(251, 146, 60, 0.6); /* orange */
+}
+
+/* Glowing input focus */
+.glow-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px rgba(251, 146, 60, 0.6); /* orange */
+  border-color: #fb923c; /* orange-400 */
+}
 
 /* Global font and base styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background-color: #0f172a; /* dark navy background */
+  color: #e2e8f0; /* light gray text */
 }
 
 /* Smooth scroll for internal links */
@@ -29,7 +66,7 @@ img.rounded-full {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(255, 115, 0, 0.15); /* softer orange-tinted shadow */
 }
 
 /* Center text in smaller devices */
@@ -52,7 +89,7 @@ img.rounded-full {
 /* Contact link styles */
 a {
   text-decoration: none;
-  color: #2563eb; /* Tailwind blue-600 */
+  color: #fb923c; /* orange-400 */
 }
 
 a:hover {
@@ -63,4 +100,27 @@ a:hover {
 button,
 a.button {
   transition: background-color 0.3s ease;
+  background-color: #f97316; /* orange-500 */
+  color: white;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #fb923c; /* orange-400 */
+}
+.glow-card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* orange glow */
+}
+.glow-card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* orange glow */
 }
