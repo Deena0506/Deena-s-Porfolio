@@ -1,160 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deena's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    // Toggle dark mode
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-    }
-
-    // Set theme on page load
-    document.addEventListener("DOMContentLoaded", function () {
-      const storedTheme = localStorage.getItem('theme');
-      if (storedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      }
-    });
-  </script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
-<!-- Navbar -->
-<nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="text-xl font-bold text-gray-900 dark:text-white">Deena's Portfolio</div>
-    <ul class="flex space-x-6">
-      <li><a href="#home" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Home</a></li>
-      <li><a href="#skills" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Skills</a></li>
-      <li><a href="#projects" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Projects</a></li>
-      <li><a href="#experience" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Experience</a></li>
-      <li><a href="#contact" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+<body class="bg-gray-100 text-gray-800">
 
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
-
-  <!-- Dark Mode Toggle and CV Download -->
-  <div class="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow">
-    <h1 class="text-3xl font-bold">Deenadhayal</h1>
-    <div class="flex gap-4">
-      <button onclick="DarkMode()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600">
-         Dark Mode
-      </button>
-      <a href="Deenadhayal Resume (2).pdf" download class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Download CV</a>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
+      <div class="text-xl font-bold text-gray-900">Deena's Portfolio</div>
+      <ul class="flex flex-wrap space-x-4 text-sm md:text-base">
+        <li><a href="#home" class="text-gray-700 hover:text-blue-500">Home</a></li>
+        <li><a href="#skills" class="text-gray-700 hover:text-blue-500">Skills</a></li>
+        <li><a href="#projects" class="text-gray-700 hover:text-blue-500">Projects</a></li>
+        <li><a href="#experience" class="text-gray-700 hover:text-blue-500">Experience</a></li>
+        <li><a href="#contact" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="flex flex-wrap justify-between items-center px-6 py-4 bg-white shadow">
+    <h1 class="text-3xl font-bold w-full md:w-auto mb-2 md:mb-0">Deenadhayal</h1>
+    <a href="Deenadhayal Resume (2).pdf" download class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+      Download CV
+    </a>
   </div>
 
-  <!-- Home Section -->
-  <section id="home" class="text-center bg-white dark:bg-gray-800 py-12">
-    <img src="deena's pic.jpg" alt="Deena" class="mx-auto w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg mb-4" />
-    <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-100">Hi, I'm Deenadhayal 👋</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mt-2">Web Developer | UI Designer | Content Creator </p>
+  <!-- Home -->
+  <section id="home" class="text-center bg-white py-12 px-4">
+    <img src="deena's pic.jpg" alt="Deena" class="mx-auto w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg mb-4" />
+    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Hi, I'm Deenadhayal 👋</h1>
+    <p class="text-base md:text-lg text-gray-600 mt-2">Web Developer | UI Designer | Content Creator</p>
   </section>
 
   <!-- About -->
-  <header class="py-8 text-center bg-white dark:bg-gray-800 shadow">
-    <p class="text-xl mt-2 max-w-3xl mx-auto">
+  <section class="py-8 px-4 text-center bg-white shadow">
+    <p class="text-lg max-w-4xl mx-auto">
       I'm a web developer with an engineering background, blending technical expertise with creativity. With a degree in Information Technology, I have hands-on experience building dynamic web and mobile applications, including a cross-platform app that helps drivers during on-road breakdowns. In addition to development, I'm a skilled Canva editor, storyteller, and video creator who enjoys vlogging and bringing ideas to life through digital content. Passionate about innovation and collaboration, I constantly explore new ways to connect technology with everyday experiences.
     </p>
-  </header>
+  </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-12 container mx-auto">
-    <h2 class="text-2xl font-semibold mb-6">Skills</h2>
-    <div class="flex flex-wrap gap-4">
-      <span class="px-4 py-2 bg-blue-100 dark:bg-blue-800 rounded-full">HTML</span>
-      <span class="px-4 py-2 bg-blue-100 dark:bg-blue-800 rounded-full">CSS</span>
-      <span class="px-4 py-2 bg-blue-100 dark:bg-blue-800 rounded-full">JavaScript</span>
-      <span class="px-4 py-2 bg-blue-100 dark:bg-blue-800 rounded-full">UI Designer</span>
-      <span class="px-4 py-2 bg-blue-100 dark:bg-blue-800 rounded-full">Content Creator</span>
+  <section id="skills" class="py-12 px-4 container mx-auto">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <span class="px-4 py-2 bg-blue-100 rounded-full">HTML</span>
+      <span class="px-4 py-2 bg-blue-100 rounded-full">CSS</span>
+      <span class="px-4 py-2 bg-blue-100 rounded-full">JavaScript</span>
+      <span class="px-4 py-2 bg-blue-100 rounded-full">UI Designer</span>
+      <span class="px-4 py-2 bg-blue-100 rounded-full">Content Creator</span>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-12 container mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-    <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+  <section id="projects" class="py-12 px-4 container mx-auto bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="#" class="block hover:shadow-lg transition p-4 rounded-lg">
-        <img src="project pic.png" alt="Project 1" class="w-full h-40 object-cover rounded-md" />
-        <h3 class="mt-4 text-lg font-semibold">Vehicle Breakdown Assistance System for On Road</h3>
-        <p class="mt-2 text-gray-600 dark:text-gray-300">Cross-Platform Mobile Application | Flutter, Firebase, OpenStreetMap
-
-          A mobile application designed to assist vehicle users during on-road breakdowns by providing real-time connectivity with nearby service providers. The app aims to reduce response time and improve road safety, especially in unfamiliar locations.
-
-          Problem Statement
-          Vehicle breakdowns often leave drivers stranded without quick access to assistance. Traditional solutions are time-consuming and ineffective during emergencies.
-
-          Solution Overview
-          The system enables users to:
-          Share live location using OpenStreetMap integration
-          Select the specific type of vehicle issue (e.g., flat tire, engine failure, battery issue)
-          Discover and connect with nearby verified service providers
-          Receive real-time status updates through Firebase
-          Communicate directly with mechanics or towing personnel
-          Access service history for future reference
-
-          Tech Stack
-          Frontend: Flutter (Dart)
-          Backend: Firebase Authentication, Firestore, Cloud Storage
-          Location Services: OpenStreetMap (flutter_map), Geolocator
-          Push Notifications: Firebase Cloud Messaging
-
-          Outcome
-          This project showcases skills in cross-platform mobile development, real-time database integration, and location-based services. It delivers a practical, user-focused solution to a common real-world problem.
+      <div class="block hover:shadow-lg transition p-4 rounded-lg bg-gray-50">
+        <img src="project pic.png" alt="Project" class="w-full h-40 object-cover rounded-md mb-4" />
+        <h3 class="text-lg font-semibold mb-2">Vehicle Breakdown Assistance System</h3>
+        <p class="text-sm text-gray-700 text-justify">
+          A cross-platform mobile application that helps users during vehicle breakdowns using Flutter, Firebase, and OpenStreetMap. Users can share location, choose service, connect with providers, and track updates in real time.
         </p>
-      </a>
+      </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-12 container mx-auto">
-    <h2 class="text-2xl font-semibold mb-6">Experience</h2>
-    <div class="space-y-4">
-      <div class="flex items-center gap-4 mb-6">
-        <img src="cognifyz-1.png" alt="Cognifyz Logo" class="w-16 h-16 object-contain" />
+  <section id="experience" class="py-12 px-4 container mx-auto">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Experience</h2>
+    <div class="space-y-6">
+      <div class="flex flex-wrap items-center gap-4">
+        <img src="cognifyz-1.png" alt="Cognifyz" class="w-16 h-16 object-contain" />
         <div>
           <h3 class="text-lg font-bold">Web Development Intern</h3>
-          <p class="text-gray-600 dark:text-gray-300">Cognifyz Technologies: July - Present</p>
-          <p>I'm a web developer intern at Cognifyz Technologies.</p>
+          <p class="text-gray-600">Cognifyz Technologies: July - Present</p>
         </div>
       </div>
-
-      <div class="flex items-center gap-4 mb-6">
-        <img src="logo_old.webp" alt="Accent Logo" class="w-16 h-16 object-contain" />
+      <div class="flex flex-wrap items-center gap-4">
+        <img src="logo_old.webp" alt="Accent" class="w-16 h-16 object-contain" />
         <div>
           <h3 class="text-lg font-bold">Web Development Intern</h3>
-          <p class="text-gray-600 dark:text-gray-300">Accent Technosoft: July - August 2024</p>
-          <p>I was a web development intern at Accent Technosoft for a month.</p>
+          <p class="text-gray-600">Accent Technosoft: July - August 2024</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-12 container mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-    <h2 class="text-2xl font-semibold mb-6">Contact</h2>
-    <p>Mobile: +91 9344547363</p>
-    <p>Email: deendhayal0705.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/deenadhayal-k-a-906359232" class="text-blue-500 underline">Click here</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/rj_deenadhayal?igsh=cHM0ZWZ6eWR3OXlu" class="text-blue-500 underline">Click here</a></p>
-    <p>YouTube: <a href="https://youtube.com/@deezone5?si=j2pwOv8-8L8C0hi8" class="text-blue-500 underline">Click here</a></p>
+  <section id="contact" class="py-12 px-4 container mx-auto bg-white rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold mb-6 text-center">Contact</h2>
+    <div class="space-y-2 text-center text-base">
+      <p>Mobile: +91 9344547363</p>
+      <p>Email: <a href="mailto:deendhayal0705@gmail.com" class="text-blue-500 underline">deendhayal0705@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/deenadhayal-k-a-906359232" class="text-blue-500 underline">Click here</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/rj_deenadhayal?igsh=cHM0ZWZ6eWR3OXlu" class="text-blue-500 underline">Click here</a></p>
+      <p>YouTube: <a href="https://youtube.com/@deezone5?si=j2pwOv8-8L8C0hi8" class="text-blue-500 underline">Click here</a></p>
+    </div>
   </section>
 
+  <!-- AOS Animation -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-<div data-aos="zoom-in">Zoom In!</div>
-<div data-aos="fade-left">Fade Left</div>
-
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <script>AOS.init();</script>
   <script src="script.js"></script>
-</body>
 
+
+</body>
 </html>

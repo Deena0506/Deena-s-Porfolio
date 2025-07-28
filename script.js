@@ -1,21 +1,19 @@
-// Toggle dark mode
-function toggleDarkMode() {
-  document.documentElement.classList.toggle('dark');
-  localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-}
-
-// Set theme on page load
-document.addEventListener("DOMContentLoaded", function () {
-  const storedTheme = localStorage.getItem('theme');
-  if (storedTheme === 'dark') {
-    document.documentElement.classList.add('dark');
-  }
-});
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+// Initialize AOS animations
+document.addEventListener('DOMContentLoaded', function () {
+  AOS.init({
+    duration: 1000, // Animation duration
+    once: true      // Animate only once
   });
+
+  // Smooth scroll for internal links (in case browser doesn't support scroll-behavior)
+  const links = document.querySelectorAll("a[href^='#']");
+  for (const link of links) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 });

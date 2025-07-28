@@ -1,55 +1,66 @@
-/* styles.css */
+/* style.css */
 
+/* Global font and base styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Responsive text alignment for paragraphs */
-p {
-  text-align: justify;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
+/* Smooth scroll for internal links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section padding adjustments for better spacing */
 section {
-  padding: 2rem 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-@media (min-width: 768px) {
-  section {
-    padding: 3rem 2rem;
-  }
-
-  p {
-    text-align: left;
-  }
-}
-
-/* For image round borders and layout adjustments */
-.rounded-full {
+/* Rounded profile image */
+img.rounded-full {
   border-radius: 9999px;
 }
 
-.shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+/* Custom card hover effect for projects */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Buttons */
-button, a {
-  transition: all 0.3s ease;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Custom containers */
-.container {
-  max-width: 1200px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+/* Center text in smaller devices */
+@media (max-width: 768px) {
+  h1, h2, h3, p, .text-center {
+    text-align: center;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Contact link styles */
+a {
+  text-decoration: none;
+  color: #2563eb; /* Tailwind blue-600 */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Custom button enhancements */
+button,
+a.button {
+  transition: background-color 0.3s ease;
 }
